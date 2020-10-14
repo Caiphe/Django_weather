@@ -1,0 +1,62 @@
+{% include 'core/base.html' %}
+
+{% block content %}
+<div class="main-bg" style="background-image: url('/static/img/map-bg.jpeg');">
+
+    <div class="form-container">
+
+        {% if user.is_authenticated %}
+        <div class="user_data">
+            <span class="user_name"> Hi! {{ user.username|title }}</span>
+            <a class="logout_a" href="{% url 'log-out' %}">Logout</a>
+        </div>
+        {% endif %}
+        <div class="main-container">
+            <h2 class="form-heading">Complete This Form</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="flexed-block">
+                    <div class="each-field">{{ form.city }}</div>
+                    <div class="each-field">{{ form.period }}</div>
+
+                    <div class="each-field">
+                        <button type="submit" class="submit-form-btn">SUBMIT</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    {% if city_data.city %}
+    <div class="weather_data">
+
+        <div class="city_name">
+            <div class="text-city">{{ city_data.city }}</div>
+            <p>Av. Temperature</p>
+            <div class="temp-data">{{ city_data.temp }} ° F</div>
+        </div>
+
+        <div class="city_name">
+            <div class="text-city"></div>
+            <p>Min. Temperature</p>
+            <div class="temp-data">{{ city_data.temp_min }} ° F</div>
+        </div>
+
+        <div class="city_name">
+            <div class="text-city"></div>
+            <p>Max. Temperature</p>
+            <div class="temp-data">{{ city_data.temp_max }} ° F</div>
+        </div>
+
+        <div class="city_name">
+            <div class="text-city"></div>
+            <p>Humidity</p>
+            <div class="temp-data">{{ city_data.humidity }} ° F</div>
+        </div>
+
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

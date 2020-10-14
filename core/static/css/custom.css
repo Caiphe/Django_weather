@@ -1,0 +1,377 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF7g4.ttf) format('truetype');
+}
+body {
+  font-size: 15px;
+  position: relative;
+  padding: 0px;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+.main-bg {
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdcdcd;
+  background: #020024;
+}
+.form-container {
+  position: relative;
+  width: 90%;
+  background-color: #ffffff0d;
+  margin: 20px auto;
+  padding: 7px 40px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.form-container .user_data {
+  position: absolute;
+  right: 100px;
+}
+.form-container .user_data span {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+.form-container .user_data .logout_a {
+  color: #e8c926;
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.479);
+  padding: 7px 10px;
+  text-decoration: none;
+}
+.form-container .user_data .logout_a:hover {
+  background-color: #e8c926;
+  color: #020024;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.form-container .main-container {
+  margin: 25px auto;
+}
+.form-container .main-container form {
+  padding: 0px;
+  margin-left: -16px;
+}
+.form-container .main-container .form-heading {
+  font-size: 25px;
+  margin-bottom: 40px;
+  color: #e8c926;
+}
+.form-container .main-container .flexed-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.form-container .main-container .each-field {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.form-container .main-container .each-field .form-field {
+  width: 260px;
+  height: 45px;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: lighter;
+  background: #cdcdcd;
+  outline: none !important;
+}
+.form-container .main-container .each-field .submit-form-btn {
+  width: 120px;
+  background-color: #e8c926;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.form-container .main-container .each-field .submit-form-btn:hover {
+  background: #e8c82671;
+}
+.weather_data {
+  position: relative;
+  width: 90%;
+  padding: 40px;
+  background-color: #ffffff0d;
+  border-radius: 5px;
+  margin-top: 40px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.weather_data .city_name {
+  width: 220px;
+  height: 180px;
+  background-color: #4a32c145;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-right: 20px;
+}
+.weather_data .city_name .text-city {
+  font-size: 24px;
+  color: #fff;
+}
+.weather_data .city_name p {
+  line-height: 20px;
+  color: #e8c926;
+  margin-top: 30px;
+}
+.weather_data .city_name .temp-data {
+  font-size: 35px;
+  color: #fff;
+  margin-top: -10px;
+}
+.weather_data .city_weather_heading {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+}
+.weather_data .each-data {
+  position: relative;
+  margin-bottom: 20px;
+}
+.weather_data .each-data .value-heading {
+  color: #e8c926;
+  font-size: 14px;
+  font-weight: 400;
+}
+.weather_data .each-data .value-data {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+.account-form-block {
+  background-color: #ffffff0d;
+  width: 400px;
+  height: 450px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  padding: 45px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 3px 4px 14px rgba(0, 0, 0, 0.25);
+}
+.account-form-block .account-header {
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 8px;
+}
+.account-form-block .message_block {
+  color: #e8c926;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+  transition: all 0.4s ease;
+  display: none;
+}
+.account-form-block .form-field-container {
+  margin-bottom: 21px;
+}
+.account-form-block input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: lighter;
+  background: #cdcdcd;
+  outline: none !important;
+}
+.account-form-block button {
+  width: 100%;
+  background-color: #e8c926;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.account-form-block button:hover {
+  background: #e8c82671;
+}
+.account-url {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.account-url:hover {
+  color: #e8c926;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated2 {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated3 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+    display: block;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+@-webkit-keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown;
+}

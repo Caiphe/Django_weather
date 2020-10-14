@@ -1,0 +1,58 @@
+{% extends 'accounts/account_base.html' %}
+
+{% block content %}
+<div class="account-form-block" style="height: 525px;">
+    <h3 class="account-header" >ENREGISTREMENT</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="message_block animated zoomIn">Username taken !!! Try again.</div>
+        <div class="form-field-container">
+            {{ form.username }}
+        </div>
+        <div class="form-field-container">
+            {{ form.email }}
+        </div>
+        <div class="form-field-container">
+            {{ form.password1 }}
+        </div>
+        <div class="form-field-container">
+            {{ form.password2 }}
+            <div class="icon-conatiner"></div>
+        </div>
+        <div class="form-field-container"><button type="submit" class="submit-btn">Continue</button></div>
+        <div class="form-url">
+            <a href="{% url 'login' %}" class="account-url">Log In</a>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+<script type="text/javascript">
+    $("#id_username").change(function () {
+    var username = $(this).val();
+
+    $.ajax({
+    url: "{% url 'validate-username' %}",
+    data: {
+        'username': username
+    },
+    dataType: 'json',
+    success: function (data) {
+        if (data.is_taken) {
+            $('.message_block').css('display', 'block');
+            $('#id_username').val("");
+            $('#id_username').focus();
+        }else{
+            $('.message_block').css('display', 'none');
+        }
+        }
+    });
+
+});
+
+AOS.init();
+
+</script>
+{% endblock %}

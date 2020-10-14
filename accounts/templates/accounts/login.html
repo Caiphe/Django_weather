@@ -1,0 +1,52 @@
+{% extends 'accounts/account_base.html' %}
+
+{% block content %}
+<div class="account-form-block">
+    <h3 class="account-header">SIGN IN</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <!-- {{ form }} -->
+        <div class="message_block animated zoomIn">Username doesn't exist</div>
+        <div class="form-field-container">
+            {{ form.username }}
+        </div>
+        <div class="form-field-container">
+            {{ form.password }}
+        </div>
+        <div class="form-field-container">
+            <button type="submit" class="submit-btn">Continue</button>
+        </div>
+        <div class="form-url">
+            <a href="{% url 'register' %}" class="account-url">ENREGISTREMENT</a>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    $("#id_username").change(function () {
+    var username = $(this).val();
+
+    $.ajax({
+    url: "{% url 'check-username' %}",
+    data: {
+        'username': username
+    },
+    dataType: 'json',
+    success: function (data) {
+        if (data.exists) {
+            $('.message_block').css('display', 'block');
+            $('#id_username').val("");
+            $('#id_username').focus();
+        }else{
+            $('.message_block').css('display', 'none');
+        }
+    }
+
+    });
+});
+
+
+</script>
+{% endblock %}
+

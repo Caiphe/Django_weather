@@ -1,0 +1,8 @@
+{% extends 'accounts/account_base.html' %}
+
+{% block content %}
+<div class="account-form-block" align="center">
+    <div class="account-text">YOU HAVE <br /> LOGGED OUT</div>
+    <a href="{% url 'login' %}" class="login-again">LOGIN</a>
+</div>
+{% endblock %}
