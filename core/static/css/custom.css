@@ -141,7 +141,7 @@ body {
 }
 .weather_data .city_name {
   width: 220px;
-  height: 180px;
+  height: 191px;
   background-color: #4a32c145;
   text-align: center;
   box-sizing: border-box;
@@ -155,7 +155,7 @@ body {
 .weather_data .city_name p {
   line-height: 20px;
   color: #e8c926;
-  margin-top: 30px;
+  margin-top: 45px;
 }
 .weather_data .city_name .temp-data {
   font-size: 35px;
@@ -374,4 +374,10 @@ body {
 .slideOutDown {
   -webkit-animation-name: slideOutDown;
   animation-name: slideOutDown;
+}
+.icon-container {
+  width: 160px;
+}
+.icon-container img {
+  width: 100%;
 }

@@ -31,10 +31,11 @@
     {% if city_data.city %}
     <div class="weather_data">
 
-        <div class="city_name">
+        <div class="city_name" style="padding: 10px 20px;">
+            <img src="http://openweathermap.org/img/w/{{ city_data.icon }}.png" alt="Image">
             <div class="text-city">{{ city_data.city }}</div>
-            <p>Av. Temperature</p>
-            <div class="temp-data">{{ city_data.temp }} ° F</div>
+            <p style="margin-top: 10px;">Av. Temperature</p>
+            <div class="temp-data" >{{ city_data.temp }} ° F</div>
         </div>
 
         <div class="city_name">
@@ -54,6 +55,14 @@
             <p>Humidity</p>
             <div class="temp-data">{{ city_data.humidity }} ° F</div>
         </div>
+
+        <div class="city_name">
+            <div class="text-city"></div>
+            <p>Description</p>
+            <div class="temp-data" style="font-size: 22px;">{{ city_data.description }}</div>
+        </div>
+
+
 
     </div>
     {% endif %}
