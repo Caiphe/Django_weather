@@ -5,6 +5,7 @@
 
     <div class="form-container">
 
+
         {% if user.is_authenticated %}
         <div class="user_data">
             <span class="user_name"> Hi! {{ user.username|title }}</span>
@@ -27,6 +28,8 @@
             </form>
         </div>
     </div>
+
+
 
     {% if city_data.city %}
     <div class="weather_data">
@@ -61,10 +64,49 @@
             <div class="temp-data" style="font-size: 22px;margin-top: 53px;">{{ city_data.description|title }}</div>
         </div>
 
-
-
     </div>
+
+    <div id="myChart"></div>
+
     {% endif %}
+
 </div>
 
+
+
+
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var chartData = {
+    "type": 'bar',
+    'scale-x':{
+        "values":[
+            'Max Temperature',
+            'Min Temperature',
+            'Av Temperature',
+            'Humidity'
+        ]
+    },
+    "series":[
+        {
+            'values':[
+            {% if city_data.city %}
+                {{ city_data.temp_min }},
+                {{ city_data.temp_max }},
+                {{ city_data.temp }},
+                {{ city_data.humidity }}
+            {% endif %}
+            ]
+        }
+    ]
+}
+
+
+zingchart.render({
+    id:'myChart',
+    data: chartData
+});
+
+</script>
 {% endblock %}
