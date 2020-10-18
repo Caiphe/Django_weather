@@ -20,9 +20,9 @@ class UserRegistrationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["username"].label = ''
-        self.fields["username"].widget.attrs["placeholder"] = "Nom d'utilisateur *"
+        self.fields["username"].widget.attrs["placeholder"] = "Username *"
         self.fields["email"].label = ''
-        self.fields["email"].widget.attrs["placeholder"] = "Addresse Email  *"
+        self.fields["email"].widget.attrs["placeholder"] = "Email Address  *"
         self.fields["password1"].widget.attrs["placeholder"] = "Password *"
         self.fields["password2"].label = ''
         self.fields["password2"].widget.attrs["placeholder"] = "Confirm Password *"
@@ -36,6 +36,6 @@ class CustomAuthenticationForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["username"].label = ''
-        self.fields["username"].widget.attrs["placeholder"] = "Nom d'utilisateur *"
+        self.fields["username"].widget.attrs["placeholder"] = "Username *"
         self.fields["password"].label = ''
-        self.fields["password"].widget.attrs["placeholder"] = "Mot de Passe *"
+        self.fields["password"].widget.attrs["placeholder"] = "Password *"
